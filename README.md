@@ -2,9 +2,9 @@
 
 Personal software projects and notes by Jaison. Production domain: https://www.bld8.dev.
 
-**Status:** approved first release. Home, Work, About and two project pages are
-built. Workbench remains at the documentation stage. Publication and deployment
-are in progress; see docs/deployment.md for the verified state.
+**Status:** first release deployed at [bld8-web.vercel.app](https://bld8-web.vercel.app).
+Home, Work, About and two project pages are published. Workbench remains at the
+documentation stage. Custom-domain DNS is pending; see [deployment details](docs/deployment.md).
 
 ## Run locally
 

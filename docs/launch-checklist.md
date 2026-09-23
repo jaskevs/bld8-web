@@ -7,9 +7,10 @@
 - [x] Lighthouse mobile performance 97, best practices 100 and SEO 100; remaining suggestions recorded in verification.md.
 - [x] Reduced-motion handling, focus states and contrast checked in the desktop/mobile browser suite.
 - [x] Page metadata, favicon, sharing image, sitemap and robots configured and generated locally.
-- [ ] Actual lint/typecheck/build and relevant test commands pass in CI.
+- [x] Lint/typecheck/build, content tests and desktop/mobile browser checks passed in GitHub Actions for release 6ac0fb7.
 - [ ] Production domain, HTTPS and canonical redirect verified.
 - [ ] Repository README, licence, screenshot and live URL ready.
-- [ ] Website/GitHub links verified; bld8-web pin updated after publication.
+- [x] Deployed website routes and public GitHub architecture/ADR links verified.
+- [ ] bld8-web profile pin reviewed after publication.
 
 Local results are recorded in [verification.md](verification.md). Remaining boxes stay open until their evidence exists. Publication is a separate action requiring the user's request.

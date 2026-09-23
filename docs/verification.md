@@ -122,3 +122,18 @@ The source now uses First release instead of Local preview. Vercel is linked to
 bld8-web in the verified personal Hobby team jaskevs-4920s-projects. Credentials
 remain outside Git; .env files, .vercel and local build/test outputs are ignored.
 See deployment.md for the subsequently verified deployment and domain state.
+
+## Production deployment verified - 23 September 2026
+
+Release 6ac0fb7 was committed and pushed with the required personal author and
+committer identity. GitHub Actions run 35826198930 passed. Vercel deployment
+dpl_4H54hpWb7MwYjKZynSDDDKizsCZ6 is READY and serves bld8-web.vercel.app.
+All five content routes and generated assets returned 200; missing routes return
+404. Canonicals target www.bld8.dev. Live keyboard interaction, desktop/mobile
+overflow and page-error checks passed. Public repository and all linked ADR and
+architecture pages returned 200. The live homepage was visually reviewed.
+
+Both custom hosts are configured in Vercel, with an apex-to-www 308 redirect;
+Cloudflare DNS and custom-domain HTTPS verification are pending user action.
+The one-time deployment is complete. Automatic Git deployment awaits separate
+approval; manual screen-reader review and licence selection remain open.

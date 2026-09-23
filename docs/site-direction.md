@@ -28,8 +28,8 @@ Avoid repeated self-introduction, promotional slogans and long status narratives
 Use simple status labels and put necessary detail on the relevant project page.
 Keep the original headline, “Engineering, in the open.”
 
-Workbench is in planning/documentation. The website design and copy are approved for the first release; publication and Vercel deployment are in progress. See deployment.md for the verified live state. No extra project or LinkedIn URL was
-supplied. Manual accessibility review and production launch are still pending.
+Workbench is in planning/documentation. The website design and copy are approved for the first release; source is published and the first deployment is live on bld8-web.vercel.app. Custom-domain DNS is pending; see deployment.md for the verified live state. No extra project or LinkedIn URL was
+supplied. Manual accessibility review and final custom-domain launch checks are still pending.
 
 The Dribbble-inspired brutalist variation was an explored and rejected direction;
 do not reintroduce it without a new request.
