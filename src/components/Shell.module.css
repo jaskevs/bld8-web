@@ -1,0 +1,27 @@
+.header { min-height: 106px; display: flex; align-items: center; gap: 3rem; border-bottom: 1px solid var(--color-line); }
+.logo { text-decoration: none; }
+.wordmark { display: inline-flex; align-items: center; gap: 0.75rem; font-family: var(--font-display), sans-serif; font-size: 1.875rem; font-weight: 800; line-height: 1; letter-spacing: -0.075em; }
+.wordmark svg, .wordmarkDot { color: var(--color-accent-text); }
+.headerNote { color: var(--color-muted); margin-top: 5px; }
+.nav { display: flex; align-items: center; margin-left: auto; gap: 2rem; font-size: 0.875rem; }
+.nav a { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; position: relative; text-decoration: none; color: var(--color-muted); }
+.nav a:hover, .nav a[aria-current] { color: var(--color-ink); }
+.nav a[aria-current]::after { content: ""; position: absolute; height: 2px; left: 0; right: 0; bottom: 3px; background: var(--color-accent); }
+.nav svg { width: 13px; height: 13px; }
+.footer { --color-ink: #ffffff; --color-muted: #bcbcbc; --color-accent: var(--color-accent-on-dark); --color-accent-text: var(--color-accent-on-dark); --color-accent-ink: #191919; background: #191919; color: var(--color-ink); padding-block: 3.5rem 1.5rem; }
+.footerTop, .footerBottom { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.footerIntro { color: var(--color-muted); font-size: 0.875rem; margin-top: 1.25rem; }
+.footerBottom { color: var(--color-muted); font-size: 0.75rem; margin-top: 4rem; }
+.footerBottom a { min-height: 44px; display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; }
+.footerBottom a:hover { color: var(--color-accent); }
+@media (max-width: 900px) { .headerNote { display: none; } }
+@media (max-width: 560px) {
+  .header { min-height: 86px; gap: 1rem; }
+  .wordmark { gap: 0.5rem; font-size: 1.6rem; }
+  .wordmark svg { width: 21px; }
+  .nav { gap: 1rem; font-size: 0.8125rem; }
+  .nav a { gap: 0.25rem; }
+  .nav svg { width: 11px; }
+  .footerTop, .footerBottom { align-items: flex-start; flex-direction: column; gap: 1.25rem; }
+  .footerBottom { margin-top: 2rem; gap: 0; }
+}

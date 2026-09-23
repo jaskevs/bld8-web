@@ -1,31 +1,58 @@
 # BLD8 website
 
-Public website for BLD8 at `https://www.bld8.dev`.
+Personal software projects and notes by Jaison. Production domain: https://www.bld8.dev.
 
-**Status:** documentation and directory scaffold only. Design and implementation
-have not started; no application dependencies, CI runs or deployment exist yet.
+**Status:** approved first release. Home, Work, About and two project pages are
+built. Workbench remains at the documentation stage. Publication and deployment
+are in progress; see docs/deployment.md for the verified state.
 
-## Scope
+## Run locally
 
-Home, Work and About at launch. Add Engineering and Lab only when content exists.
-The site is a separate repository from BLD8 Workbench and will deploy to Vercel.
+Use Node 22.13+ (22.x) and npm. From this repository:
 
-## Planned implementation
+```powershell
+npm ci
+npm run dev
+```
 
-- Next.js App Router and TypeScript.
-- CSS Modules and custom-property tokens; no speculative shared component package.
-- Responsive layouts, keyboard and screen-reader checks, restrained motion.
-- Metadata, a static sharing image, sitemap and robots configuration.
+Open http://localhost:3108. For a production preview, run `npm run build`, then
+`npm run start`. Commands bind to the local loopback address.
 
-## Start
+## Check the implementation
 
-1. Complete [content inventory](docs/content-inventory.md).
-2. Decide the [visual direction](docs/site-direction.md).
-3. Implement the [site brief](docs/site-brief.md) in the reserved `src/` structure.
-4. Use the [launch checklist](docs/launch-checklist.md) before publication.
+```powershell
+npm run lint
+npm run typecheck
+npm test
+npm run build
+npx playwright install chromium
+npm run test:e2e
+```
 
-There is no install/build command yet. Generate the Next.js package and lockfile
-when implementation begins, preserving the documentation and original CSS direction.
-Add CI for actual commands once those commands exist; do not advertise passing checks now.
+Browser checks cover desktop (1440 px), mobile (360 px), navigation, keyboard
+links, layer selection and native disclosures, missing pages, canonical URLs, horizontal overflow and automated
+accessibility checks. A manual screen-reader pass is still needed before launch.
+GitHub Actions runs these checks on pushes and pull requests.
 
-**Licence:** choose and add a licence before publishing the source repository.
+## Structure
+
+- `src/app/`: Home, Work, About, project details and metadata routes.
+- `src/components/`: navigation, footer, project panels, the interactive layer study and project detail layouts.
+- `src/styles/`: handwritten tokens, reset, global foundations and reduced-motion rules.
+- `src/lib/site.ts`: public site identity, routes and project summaries.
+- `tests/`: content integrity checks and browser smoke/accessibility checks.
+- `docs/`: content inventory, design direction, brief and launch checklist.
+
+Next.js App Router, TypeScript and CSS Modules. Fonts are self-hosted using
+`next/font/local` and Fontsource packages; no Google Fonts fetch at build or runtime.
+Dependencies are pinned through package-lock.json. No secrets are needed to run.
+
+The Workbench application and private planning remain separate repositories.
+See [site direction](docs/site-direction.md) and [launch checklist](docs/launch-checklist.md).
+
+**Licence:** a source licence has not yet been selected. Bundled fonts retain their
+upstream SIL Open Font License in their Fontsource packages.
+
+## Preview
+
+![BLD8 homepage](docs/images/home.png)

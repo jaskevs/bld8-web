@@ -1,0 +1,63 @@
+.intro { padding-block: 5rem 4rem; max-width: 900px; }
+.intro h1 { font-size: clamp(3.25rem, 7.2vw, 6rem); line-height: 1.05; margin-top: 1.5rem; text-wrap: balance; }
+.introDescription { max-width: 610px; color: var(--color-muted); margin-top: 2rem; font-size: 1.0625rem; line-height: 1.8; }
+.pageEnd { margin-block: 3rem 5rem; color: var(--color-muted); max-width: 590px; font-size: 0.875rem; }
+.back { margin-top: 2.5rem; font: 0.6875rem var(--font-mono); color: var(--color-muted); min-height: 44px; display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; }
+.back:hover { color: var(--color-accent-text); }
+.projectHeader { padding-block: 2.25rem 3.5rem; }
+.projectHeader h1 { font-size: clamp(3rem, 7vw, 6rem); margin-block: 1.5rem; }
+.projectLead { max-width: 750px; font-size: clamp(1.0625rem, 2vw, 1.375rem); color: var(--color-muted); line-height: 1.6; }
+.projectMeta { display: flex; flex-wrap: wrap; gap: 1rem 3rem; align-items: center; margin-top: 2rem; font-size: 0.75rem; }
+.projectStatus { display: inline-flex; align-items: center; gap: 0.625rem; color: var(--color-accent-text); }
+.projectStatus::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent); }
+.projectLayout { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; border-top: 1px solid var(--color-line); padding-block: 3rem; }
+.projectLayout > h2 { font: 0.6875rem/1.8 var(--font-mono); color: var(--color-muted); letter-spacing: 0.07em; text-transform: uppercase; }
+.copy { max-width: 740px; }
+.copy h2, .copy h3 { font-size: clamp(1.625rem, 3vw, 2.5rem); }
+.copy p { color: var(--color-muted); margin-top: 1.25rem; }
+.copy p:first-child { margin-top: 0; }
+.copy a:not(:global(.button)) { color: var(--color-ink); }
+.copy a:hover { color: var(--color-accent-text); }
+.copy strong { color: var(--color-ink); font-weight: 500; }
+.architecture { margin-block: 2rem; padding: 1.5rem; background: var(--color-surface); border: 1px solid var(--color-line); }
+.architectureSteps { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; gap: 1.5rem; margin-top: 1.5rem; }
+.architectureSteps li { border-top: 1px solid #a0a0a0; padding-top: 1rem; font-size: 0.875rem; }
+.architectureSteps span { display: block; font-size: 0.6875rem; margin-top: 0.5rem; color: var(--color-muted); }
+.architecture figcaption { font-size: 0.6875rem; margin-top: 1.5rem; color: var(--color-muted); }
+.taskList { counter-reset: tasks; list-style: none; margin-top: 1.5rem; }
+.taskList li { counter-increment: tasks; display: flex; align-items: baseline; gap: 1.5rem; border-top: 1px solid var(--color-line); padding: 1rem 0; color: var(--color-muted); font-size: 0.875rem; }
+.taskList li::before { content: "0" counter(tasks); color: var(--color-accent-text); font: 0.625rem var(--font-mono); }
+.decisions { margin-top: 1.5rem; }
+.decisions details { border-top: 1px solid var(--color-line); padding-block: 1.125rem; }
+.decisions details:last-child { border-bottom: 1px solid var(--color-line); }
+.decisions summary { min-height: 44px; cursor: pointer; font-size: 0.9375rem; }
+.decisions summary::marker { color: var(--color-accent-text); }
+.decisions p { font-size: 0.875rem; padding-left: 1rem; }
+.projectCta { border-top: 1px solid var(--color-line); padding-block: 3rem 5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; }
+.principles { list-style: none; }
+.principles li { border-top: 1px solid var(--color-line); padding-block: 1.5rem; }
+.principles li:first-child { border-top: 0; padding-top: 0; }
+.principles h3 { font-size: 1.5rem; }
+.principles p { margin-top: 0.75rem; }
+.profileStrip { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; border-block: 1px solid var(--color-line); padding-block: 1.5rem; margin-bottom: 3rem; }
+.profileStrip > span:first-child { width: 52px; height: 52px; display: grid; place-items: center; background: var(--color-raised); border: 1px solid var(--color-line); color: var(--color-accent-text); font-family: var(--font-display); font-size: 1.5rem; }
+.profileStrip strong { font-weight: 500; font-size: 1rem; }
+.profileStrip p { color: var(--color-muted); font-size: 0.75rem; margin-top: 0.25rem; }
+.profileStrip > a { margin-left: auto; }
+.notFound { padding-block: 7rem; }
+.notFound h1 { font-size: clamp(3rem, 7vw, 6rem); margin-block: 1.5rem; }
+.notFound p { max-width: 500px; margin-bottom: 2rem; color: var(--color-muted); }
+@media (max-width: 760px) {
+  .intro { padding-block: 3rem; }
+  .introDescription { font-size: 0.9375rem; margin-top: 1.5rem; }
+  .projectLayout { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 2rem; }
+  .projectLead { font-size: 1.0625rem; }
+  .architecture { padding: 1rem; }
+  .architectureSteps { grid-template-columns: 1fr; gap: 1rem; }
+  .architectureSteps li { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-top: 0.75rem; }
+  .architectureSteps span { margin-top: 0; font-size: 0.625rem; }
+  .projectHeader { padding-bottom: 2.5rem; }
+  .profileStrip { gap: 1rem; }
+  .profileStrip > a { margin-left: 0; }
+  .pageEnd { margin-bottom: 3rem; }
+}

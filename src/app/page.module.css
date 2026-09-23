@@ -1,0 +1,36 @@
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(2rem, 4.5vw, 4.5rem); align-items: center; padding-block: 6rem 5.5rem; }
+.heroEyebrow { display: flex; align-items: center; gap: 0.6rem; color: var(--color-muted); font-size: 0.6rem; }
+.heroEyebrow > span { width: 5px; height: 5px; background: var(--color-accent); }
+.hero h1 { font-size: clamp(3.5rem, 6.65vw, 6.5rem); line-height: 1.03; margin-top: 2rem; white-space: nowrap; }
+.hero h1 > span { color: var(--color-ink); box-shadow: inset 0 -0.24em 0 var(--color-accent); }
+.heroDescription { color: var(--color-muted); font-size: clamp(0.875rem, 1.18vw, 1.0625rem); max-width: 420px; margin-block: 2rem; line-height: 1.8; }
+.heroLocation { color: var(--color-muted); font: 0.5625rem var(--font-mono); margin-top: 1.75rem; letter-spacing: 0.025em; }
+
+
+
+
+.work { padding-top: 2rem; }
+.sectionHead { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
+.sectionHead h2 { font-size: clamp(2rem, 3.2vw, 3rem); margin-top: 1rem; }
+.sectionHead .text-link { white-space: nowrap; }
+.approach { position: relative; display: grid; grid-template-columns: 1fr 2fr; padding-block: 6rem; gap: 2rem; overflow: hidden; }
+.approach > p { padding-top: 0.625rem; }
+.approach h2 { font-size: clamp(2rem, 3.9vw, 3.5rem); position: relative; z-index: 1; }
+.approach div p { margin-top: 1.5rem; color: var(--color-muted); max-width: 440px; font-size: 0.9375rem; position: relative; z-index: 1; }
+.approach div a { margin-top: 1.5rem; position: relative; z-index: 1; }
+
+@media (max-width: 1000px) { .hero { gap: 2rem; } .hero h1 { font-size: 6.4vw; } .heroEyebrow { font-size: 0.5rem; }    }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding-block: 3.5rem 3rem; gap: 3rem; }
+  .hero h1 { font-size: clamp(3rem, 10.7vw, 5rem); }
+  .heroEyebrow { font-size: 0.5625rem; }
+  .heroDescription { font-size: 0.9375rem; max-width: 390px; }
+  .hero figure { width: 100%; max-width: 480px; justify-self: center; }
+
+
+
+  .work { padding-top: 3rem; }
+  .sectionHead { align-items: flex-start; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .approach { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 3.5rem; }
+
+}

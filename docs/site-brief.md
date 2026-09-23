@@ -1,15 +1,15 @@
 # Site brief
 
-Status: planned, not designed or built.
+Status: first local implementation on 23 September 2026. Previous minimal white-and-black design with bright lime accents (refined after restoration) after the brutalist experiment was rejected; copy is concise and project-focused; design and copy approved; publication and production deployment are in progress.
 
-Purpose: make engineering judgement, implementation depth and UI craft inspectable.
+Purpose: give personal projects and their supporting notes a clear home.
 Launch target: 20 October 2026 at `www.bld8.dev`, with Vercel hosting and Cloudflare DNS.
 
-- Home: identity, direction sentence, real project card(s), GitHub link.
+- Home: a short introduction, layered illustration, project panels, current statuses and GitHub link.
 - Work: an honest Workbench entry with product statement, architecture, tasks and
   public ADR links. Include a wholly owned personal project if available; otherwise
   document the BLD8 website itself as the first completed project once it is built.
-- About: short engineering introduction and interests, LinkedIn at the bottom.
+- About: short engineering introduction and current interests. No LinkedIn URL was supplied; use GitHub.
 - Navigation at launch: Work, About, GitHub. Logo/name returns home.
 - Later: Workbench case study, Engineering note, conditional Trace Explorer/Lab.
 

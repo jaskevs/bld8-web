@@ -1,0 +1,32 @@
+:root {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-raised: #eeeeee;
+  --color-ink: #191919;
+  --color-muted: #626262;
+  --color-faint: #707070;
+  --color-line: #dedede;
+  --color-accent: #d1fe17;
+  --color-accent-text: #526600;
+  --color-accent-hover: #bee500;
+  --color-accent-soft: #f3ffd1;
+  --color-accent-on-dark: #d1fe17;
+  --color-accent-ink: #191919;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --gutter: clamp(1.25rem, 4.5vw, 5rem);
+  --content-width: 1280px;
+  --radius: 3px;
+  --duration: 180ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
