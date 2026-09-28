@@ -7,7 +7,7 @@ export const site = {
   description: "Personal projects in web development and applied AI, with notes on how they are built.",
 };
 
-export const publicRoutes = ["/", "/work", "/work/workbench", "/work/bld8-web", "/about"] as const;
+export const publicRoutes = ["/", "/work", "/work/workbench", "/work/bld8-web", "/work/coffee-docket", "/about"] as const;
 
 export function pageMetadata(title: string, description: string, path: typeof publicRoutes[number]): Metadata {
   return {
@@ -22,6 +22,7 @@ export function pageMetadata(title: string, description: string, path: typeof pu
 export const projects = [
   {
     slug: "workbench",
+    linkLabel: "Workbench notes",
     number: "01",
     title: "BLD8 Workbench",
     category: "AI WORKFLOW TOOL",
@@ -33,6 +34,7 @@ export const projects = [
   },
   {
     slug: "bld8-web",
+    linkLabel: "Website notes",
     number: "02",
     title: "The BLD8 website",
     category: "PERSONAL WEBSITE",
@@ -41,5 +43,17 @@ export const projects = [
     tags: ["Next.js", "TypeScript", "CSS Modules"],
     href: "/work/bld8-web",
     repository: "https://github.com/jaskevs/bld8-web",
+  },
+  {
+    slug: "coffee-docket",
+    linkLabel: "Coffee Docket notes",
+    number: "03",
+    title: "Coffee Docket",
+    category: "COFFEE CREDIT MANAGEMENT",
+    status: "Previous project",
+    description: "Prepaid coffee credits, customer accounts and transaction tracking, with separate staff and customer views.",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    href: "/work/coffee-docket",
+    repository: "https://github.com/jaskevs/coffee-docket",
   },
 ] as const;

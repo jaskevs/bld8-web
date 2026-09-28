@@ -7,7 +7,7 @@ describe("public content integrity", () => {
     for (const project of projects) {
       expect(publicRoutes).toContain(project.href);
       expect(new URL(project.repository).hostname).toBe("github.com");
-      expect(new URL(project.repository).pathname).toMatch(/^\/jaskevs\/bld8-(web|workbench)$/);
+      expect(new URL(project.repository).pathname).toMatch(/^\/jaskevs\/(bld8-(web|workbench)|coffee-docket)$/);
     }
   });
 

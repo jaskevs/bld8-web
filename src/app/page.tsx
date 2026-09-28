@@ -20,7 +20,7 @@ export default function Home() {
       <SystemStudy />
     </section>
     <section className={styles.work} aria-labelledby="work-title">
-      <div className={styles.sectionHead}><div><p className="eyebrow muted">01 / THE WORK</p><h2 id="work-title">Projects in progress.</h2></div><Link className="text-link" href="/work">View all work <Arrow /></Link></div>
+      <div className={styles.sectionHead}><div><p className="eyebrow muted">01 / THE WORK</p><h2 id="work-title">Projects.</h2></div><Link className="text-link" href="/work">View all work <Arrow /></Link></div>
       <ProjectList />
     </section>
     <section className={styles.approach} aria-labelledby="approach-title">

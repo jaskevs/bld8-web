@@ -14,7 +14,7 @@ export function ProjectList() {
         <p className={styles.description}>{project.description}</p>
         <p className={styles.status}><span />{project.status}</p>
         <ul className={styles.tags} aria-label="Technologies">{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
-        <Link className={`text-link ${styles.projectLink}`} href={project.href}>{project.slug === "workbench" ? "Workbench notes" : "Website notes"} <Arrow diagonal /></Link>
+        <Link className={`text-link ${styles.projectLink}`} href={project.href}>{project.linkLabel} <Arrow diagonal /></Link>
       </div>
     </article>
   ))}</div>;

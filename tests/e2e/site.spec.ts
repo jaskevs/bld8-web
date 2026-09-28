@@ -28,7 +28,7 @@ test("keyboard navigation and project reading work", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-for (const route of ["/", "/work", "/work/workbench", "/work/bld8-web", "/about"]) {
+for (const route of ["/", "/work", "/work/workbench", "/work/bld8-web", "/work/coffee-docket", "/about"]) {
   test(`${route} has accessible structure, metadata and no horizontal overflow`, async ({ page }) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     const response = await page.goto(route);
