@@ -137,3 +137,31 @@ Both custom hosts are configured in Vercel, with an apex-to-www 308 redirect;
 Cloudflare DNS and custom-domain HTTPS verification are pending user action.
 The one-time deployment is complete. Automatic Git deployment awaits separate
 approval; manual screen-reader review and licence selection remain open.
+
+## Coffee Docket write-up - 23 September 2026
+
+Added a previous-project entry on Home and Work and /work/coffee-docket with
+features, stack, architecture, data model and transaction flow, based on the
+supplied source repository. Added the route to metadata/sitemap and browser checks.
+Lint, two content tests and the production build including TypeScript passed.
+All 16 desktop/mobile browser checks passed against a fresh production server on
+port 3110, including automated accessibility, canonical and overflow checks.
+The pre-existing preview on 3108 returned an old route set; it was left untouched.
+The project-list link and desktop/mobile screenshots were checked on port 3111.
+Changes remain local: no commit, push or deployment was performed.
+
+## Coffee Docket production release - 28 September 2026
+
+- Source: 9cf454178d3f8705941606f7c96671219069ca52, pushed to main.
+- Author and committer: Jaison <26425317+jaskevs@users.noreply.github.com>; no co-authors.
+- Vercel deployment: dpl_7g7GwwigSMYrJaWX92AmicHRfiGc, READY / production.
+- Live project: https://www.bld8.dev/work/coffee-docket
+- Local checks: lint, typecheck, two content tests, build and 16 desktop/mobile browser checks passed.
+- Live checks: Home and Work contain the Coffee Docket link; project and sitemap return 200; canonical and repository links match; apex redirects to www with 308.
+- GitHub CI: https://github.com/jaskevs/bld8-web/actions/runs/36363895749 (passed).
+
+The missing project was caused by local changes that had never been committed or
+deployed. This release was deployed directly using the isolated personal Vercel
+configuration. Later on 28 September, the user completed the GitHub connection.
+Vercel now links jaskevs/bld8-web with main as its production branch and Git
+deployments enabled. No company/global Git, GitHub CLI or SSH settings were changed.

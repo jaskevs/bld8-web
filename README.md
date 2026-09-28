@@ -2,9 +2,12 @@
 
 Personal software projects and notes by Jaison. Production domain: https://www.bld8.dev.
 
-**Status:** first release deployed at [bld8-web.vercel.app](https://bld8-web.vercel.app).
-Home, Work, About and two project pages are published. Workbench remains at the
-documentation stage. Custom-domain DNS is pending; see [deployment details](docs/deployment.md).
+**Status:** live at [www.bld8.dev](https://www.bld8.dev).
+Home, Work, About and three project pages are published, including Coffee Docket
+(release 9cf4541, 28 September 2026). Workbench remains at the documentation stage.
+Custom-domain HTTPS and the root-to-www redirect are verified.
+Pushes to main deploy automatically through the connected personal GitHub/Vercel
+project; see [deployment details](docs/deployment.md).
 
 ## Run locally
 
@@ -48,7 +51,8 @@ Next.js App Router, TypeScript and CSS Modules. Fonts are self-hosted using
 Dependencies are pinned through package-lock.json. No secrets are needed to run.
 
 The Workbench application and private planning remain separate repositories.
-See [site direction](docs/site-direction.md) and [launch checklist](docs/launch-checklist.md).
+See [site direction](docs/site-direction.md), [launch checklist](docs/launch-checklist.md),
+and [website structure and publishing](docs/website-structure.md).
 
 **Licence:** a source licence has not yet been selected. Bundled fonts retain their
 upstream SIL Open Font License in their Fontsource packages.
