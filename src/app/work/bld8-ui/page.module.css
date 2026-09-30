@@ -1,0 +1,4 @@
+.preview { overflow: hidden; border-radius: var(--radius-panel); background: var(--color-bg); margin-bottom: 3rem; }
+.preview figcaption { padding: 1.25rem 1.5rem; color: var(--color-muted); font-size: .75rem; max-width: 740px; }
+.preview figcaption a { color: var(--color-ink); text-underline-offset: .2em; }
+@media (max-width: 760px) { .preview { margin-bottom: 2rem; } .preview figcaption { padding: 1rem; } }

@@ -165,3 +165,178 @@ deployed. This release was deployed directly using the isolated personal Vercel
 configuration. Later on 28 September, the user completed the GitHub connection.
 Vercel now links jaskevs/bld8-web with main as its production branch and Git
 deployments enabled. No company/global Git, GitHub CLI or SSH settings were changed.
+
+## Brighter design and broader focus — 28 September 2026
+
+This local refinement follows the requested lighter, minimal Linear/ElevenLabs
+references while preserving the existing white, black and bright lime palette.
+The two-column hero and interactive layer study remain. Softer framing, lighter
+project illustrations, a featured Workbench card and paired website/Coffee
+Docket cards replace the earlier project rows.
+
+Home, About, project summaries, metadata and the sharing image use the broader
+focus. .NET, C# and Angular remain in the stated background; current focus also
+includes React, Next.js, React Native, NestJS, Python and AI research. Project
+stack descriptions stay tied to their actual implementation or documented plan.
+
+Validation on the final source:
+- ESLint, two Vitest content checks and the Next.js production build passed,
+  including TypeScript. All six content routes and generated assets were built.
+- All 16 existing Playwright desktop/mobile checks passed against a fresh local
+  production server, including keyboard navigation, layer selection, disclosures,
+  canonical URLs, missing-page handling and automated axe accessibility scans.
+- Additional layout checks at 1440, 820, 390 and 320 px passed for Home, Work,
+  About and Coffee Docket: no horizontal overflow, browser errors or project
+  content extending beyond its card. A desktop card-height issue found during
+  screenshot review was corrected before the final checks.
+- Desktop Home, tablet hero, narrow-phone Home, mobile About, Coffee Docket and
+  the generated sharing image were visually reviewed. The README screenshot
+  now shows this local refinement.
+
+Preview: http://127.0.0.1:3117. The preview uses an isolated local server;
+existing browser profiles and company/global Git settings are unchanged.
+Design review remains open, and manual screen-reader review is not represented
+by the automated checks. No commit, push or deployment was made for this revision.
+The previous approved release remains live at https://www.bld8.dev.
+
+## Quieter content and interaction detail — 28 September 2026
+
+Removed the Home technology strip following user feedback. About now carries the
+broader technology focus in natural prose, preserving Angular/.NET/C# background
+and AI research. Home moves directly from its introduction to selected projects.
+
+Controls now use 4 px corners. Shared easing controls hover colours, link
+underlines and directional arrows, with a 2 px button lift and stable hover area.
+The skip link and focus outline remain immediate. Pointer movement is limited to
+fine-pointer devices; reduced-motion preferences disable transitions and movement.
+Fine section rules, small endpoint marks and short label rules add restrained detail.
+
+Validation: lint, two content checks, the production build including TypeScript,
+and all 16 existing desktop/mobile browser checks passed. Responsive checks at
+1440, 820, 390 and 320 px passed with no overflow or card-content overlap.
+Additional browser inspection verified normal hover and return states, stable
+hover at the lower button edge, directional arrows, link underlines and disabled
+motion under reduced-motion settings. The technology strip is absent from Home;
+all requested focus areas remain in About. Desktop Home, mobile hero and desktop
+About screenshots were reviewed. The README screenshot is updated.
+
+Local preview remains http://127.0.0.1:3117. No commit, push or deployment was
+performed. Manual screen-reader review remains outstanding.
+
+## Dotted icons and component-library experience — 28 September 2026
+
+Added a shared DotIcon SVG component with individually placed, filled circles.
+Navigation/action arrows, the cube mark, project connectors, receipt symbols
+and coffee cup now use dotted icons. Small arrows use a more open five-dot grid
+and heavier dots; navigation arrows stay at least 16 px. The coffee icon is
+upright. Icons use inherited colours and no raster assets or blur filters.
+Directional hover motion and decorative accessibility semantics are preserved.
+The favicon retains its solid form for legibility at browser-tab sizes.
+
+About now mentions maintaining React and Angular component libraries in one
+background sentence. The current-interests paragraph is shorter; no new skills
+section or promotional strip was added.
+
+Lint, the production build including TypeScript, two content tests and all 16
+existing desktop/mobile browser checks passed. Responsive checks at 1440, 820,
+390 and 320 px passed. Icon details were inspected at 1x and 2x pixel density;
+small arrow weight was increased after that review. Existing hover and
+reduced-motion behaviour was verified with the new SVG icons. About and the
+updated project icon artwork were visually reviewed.
+
+Preview: http://127.0.0.1:3117. No commit, push or deployment was performed.
+
+## Plain headline, line logo and live editing — 28 September 2026
+
+The headline is now “Software & experiments.” on Home and the sharing image,
+with matching image alt text. The original line cube is restored at its natural
+25:28 proportions. GitHub profile links use a compact diagonal icon with two
+tail dots; other dotted icons and hover behaviour remain. Existing user edits
+to the footer content were preserved.
+
+The old local URL on 3117 served a production snapshot and could not refresh
+source edits. That known BLD8 process was replaced with a development server.
+`npm run dev` now uses 3117, `npm start` uses 3118, and `npm run preview` builds
+before starting the production preview. Browser tests use 3116 and always start
+a fresh server, avoiding accidental use of a stale preview or development server.
+See local-development.md for commands, file locations and troubleshooting.
+
+Fast Refresh was verified with a real requested edit: the Home headline was
+changed in its source file while the browser was open, and the displayed text
+updated without manual navigation or reload. The new headline fits its column.
+Lint, two content checks, the production build including TypeScript and all 16
+browser checks passed. Desktop/tablet/phone layout checks passed at 1440, 820,
+390 and 320 px. The narrow-phone headline, restored logo, compact GitHub icon
+and sharing image were visually reviewed. The separate production preview on
+3118 returned the current page; its screenshot updates the README.
+
+The live development server remains available at http://127.0.0.1:3117.
+No commit, push, deployment or repository-visibility change was made.
+
+## Consistent arrow details — 28 September 2026
+
+All diagonal arrows now use the same compact two-tail-dot shape. Link,
+navigation and back-link text/icon gaps are 8 px; button gaps are 12 px.
+The text-link underline length follows the revised gap. Existing colours,
+icon weight and hover movement are preserved.
+
+TypeScript and browser checks passed across all six routes at 1440 and 320 px:
+matching diagonal icons, expected gaps, no horizontal overflow or browser errors.
+Desktop action links and mobile navigation screenshots were visually reviewed.
+The changes remain local in the live development preview on port 3117.
+
+## White project artwork - 28 September 2026
+
+Reviewed https://www.carlhauser.com/projects as a visual reference. Workbench,
+website and Coffee Docket artwork now sit on white canvases, separated from
+copy by fine rules. Lime remains on the central workflow node and coffee mark.
+Removed the coloured washes and reduced decorative shadows. Existing project
+content, grid and arrow details are preserved.
+
+Home and Work were checked at 1440, 820, 390 and 320 px: all three canvases have
+white backgrounds, no background images/gradients and no horizontal overflow.
+Desktop and mobile artwork were visually reviewed. The README screenshot is
+updated. Changes remain local; no commit, push or deployment was performed.
+
+## Grey page canvas and white panels - 28 September 2026
+
+Following the user's clarification, the page background is now #f5f5f5 while
+project cards and artwork remain #ffffff. Lime accents and fine rules remain.
+Home and Work were checked at 1440, 390 and 320 px: computed page/card colours
+match the intended contrast, with no horizontal overflow. The desktop screenshot
+was reviewed and the README preview refreshed. No commit, push or deployment.
+## BLD8 UI case study and website publication — 28 September 2026
+
+Added /work/bld8-ui, its metadata/canonical/sitemap entry, and a shared project
+entry on Home and Work. The case study covers purpose, design/motion, the Base UI
+foundation, initial scope, validation and next steps. It links to the live Vercel
+showcase and motion studies. No npm availability, public source repository,
+adoption or production-readiness claims were added.
+
+A code-based component composition provides the artwork. White outer panels and
+the portfolio's lime palette remain; yellow and black identify the UI library
+inside its own artwork. Both Workbench and BLD8 UI use explicit featured layout.
+
+Validation:
+- ESLint, both content checks and the production build (including TypeScript)
+  passed; the build generates 13 routes, including seven content pages.
+- All 18 desktop/mobile Playwright checks passed, covering keyboard navigation,
+  404 recovery, canonical metadata, horizontal overflow and automated axe scans.
+- Additional Home/Work link and case-study checks passed at 1440, 820, 390 and
+  320 px. The panel stays white; no horizontal overflow or browser errors.
+- Desktop panel and mobile case-study screenshots reviewed.
+- Production deployment and live checks are recorded in deployment.md.
+
+No commit or push was made. The current website refinements and new case study
+were deployed directly to the existing personal Vercel project. Manual
+screen-reader review remains pending. Development stays on port 3117.
+
+Live browser checks passed on https://bld8-web.vercel.app at 1440, 820, 390 and 320 px. This PC could not verify the custom domain because its connection reset. Vercel reports the domain assigned to the new release; see deployment.md.
+
+## Git release checks - 30 September 2026
+
+Before committing the pending design/copy and BLD8 UI case study, lint, both
+content tests, the production build including TypeScript and all 18 desktop/mobile
+browser checks passed. The staged release contains no .env, .vercel, generated
+build/test files or detected credential patterns. The release uses the existing
+personal identity and hooks, outside the 08:00-17:00 Melbourne commit window.

@@ -7,9 +7,9 @@ export const metadata = pageMetadata("Coffee Docket", "Prepaid coffee credit man
 
 export default function CoffeeDocket() {
   return <div className="container">
-    <Link href="/work" className={styles.back}><span aria-hidden="true">←</span> ALL PROJECTS</Link>
+    <Link href="/work" className={styles.back}><Arrow back /> ALL PROJECTS</Link>
     <header className={styles.projectHeader}>
-      <p className="eyebrow">03 / COFFEE CREDIT MANAGEMENT</p>
+      <p className="eyebrow detail-label">03 / COFFEE CREDIT MANAGEMENT</p>
       <h1>Coffee Docket</h1>
       <p className={styles.projectLead}>A web application for managing prepaid coffee credits, customer accounts and café transactions. Separate views support staff operations and customer balance checks.</p>
       <div className={styles.projectMeta}><span className={styles.projectStatus}>Previous project</span><a href="https://github.com/jaskevs/coffee-docket" className="text-link">Repository <Arrow diagonal /></a></div>

@@ -1,5 +1,23 @@
+/* Keep interaction timing consistent without delaying focus feedback. */
 @media (prefers-reduced-motion: no-preference) {
-  a, button { transition: color var(--duration) var(--ease), background-color var(--duration) var(--ease), border-color var(--duration) var(--ease); }
+  a:not(.skip-link), button, summary {
+    transition: color var(--duration) var(--ease),
+      background-color var(--duration) var(--ease),
+      border-color var(--duration) var(--ease),
+      box-shadow var(--duration-soft) var(--ease),
+      text-decoration-color var(--duration) var(--ease),
+      opacity var(--duration) var(--ease),
+      transform var(--duration-soft) var(--ease),
+      background-size var(--duration-soft) var(--ease);
+  }
+  a [data-arrow] { transition: transform var(--duration-soft) var(--ease); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .button:hover { transform: translateY(-2px); }
+  .button:active { transform: translateY(0); }
+  a:hover [data-arrow="right"] { transform: translateX(3px); }
+  a:hover [data-arrow="diagonal"] { transform: translate(2px, -2px); }
+  a:hover [data-arrow="back"] { transform: translateX(-3px); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

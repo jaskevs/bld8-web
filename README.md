@@ -3,11 +3,20 @@
 Personal software projects and notes by Jaison. Production domain: https://www.bld8.dev.
 
 **Status:** live at [www.bld8.dev](https://www.bld8.dev).
-Home, Work, About and three project pages are published, including Coffee Docket
+Home, Work, About and four project pages are published, including the [BLD8 UI case study](https://www.bld8.dev/work/bld8-ui) and Coffee Docket
 (release 9cf4541, 28 September 2026). Workbench remains at the documentation stage.
 Custom-domain HTTPS and the root-to-www redirect are verified.
 Pushes to main deploy automatically through the connected personal GitHub/Vercel
 project; see [deployment details](docs/deployment.md).
+
+## Current design
+
+The 28 September refinement broadens the copy to .NET, C#, Angular, React,
+Next.js, React Native, NestJS, Python and AI research, with a brighter minimal
+design in the existing white/black/lime palette. Technology focus stays in
+About-page prose; Home leads with projects. Controls use sharper corners and
+subtle eased interactions, with fine rules marking sections. This refinement is now published alongside the BLD8 UI case study. Read
+[the current direction](docs/site-direction.md) before continuing.
 
 ## Run locally
 
@@ -18,8 +27,12 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3108. For a production preview, run `npm run build`, then
-`npm run start`. Commands bind to the local loopback address.
+Open http://127.0.0.1:3117. Keep the terminal running and save a source file;
+changes refresh automatically. This port is now reserved for live development.
+
+For a fresh production preview, run `npm run preview` and open port 3118.
+`npm start` serves the last build and does not watch edits. Commands bind to
+the local loopback address. See [local editing and file locations](docs/local-development.md).
 
 ## Check the implementation
 

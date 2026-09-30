@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { publicRoutes } from "../../src/lib/site";
 
 test("keyboard navigation and project reading work", async ({ page }) => {
   const errors: string[] = [];
@@ -28,7 +29,7 @@ test("keyboard navigation and project reading work", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-for (const route of ["/", "/work", "/work/workbench", "/work/bld8-web", "/work/coffee-docket", "/about"]) {
+for (const route of publicRoutes) {
   test(`${route} has accessible structure, metadata and no horizontal overflow`, async ({ page }) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     const response = await page.goto(route);

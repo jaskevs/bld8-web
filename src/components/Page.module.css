@@ -1,8 +1,9 @@
-.intro { padding-block: 5rem 4rem; max-width: 900px; }
+.intro { padding-block: 5rem 4rem; max-width: 940px; }
 .intro h1 { font-size: clamp(3.25rem, 7.2vw, 6rem); line-height: 1.05; margin-top: 1.5rem; text-wrap: balance; }
-.introDescription { max-width: 610px; color: var(--color-muted); margin-top: 2rem; font-size: 1.0625rem; line-height: 1.8; }
-.pageEnd { margin-block: 3rem 5rem; color: var(--color-muted); max-width: 590px; font-size: 0.875rem; }
-.back { margin-top: 2.5rem; font: 0.6875rem var(--font-mono); color: var(--color-muted); min-height: 44px; display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; }
+.introDescription { max-width: 650px; color: var(--color-muted); margin-top: 1.75rem; font-size: 1.0625rem; line-height: 1.8; }
+.pageEnd { border-top: 1px solid var(--color-line); padding-top: 1.5rem; margin-block: 3rem 5rem; color: var(--color-muted); font-size: 0.875rem; }
+.back { margin-top: 2.5rem; font: 0.6875rem var(--font-mono); color: var(--color-muted); min-height: 44px; display: inline-flex; align-items: center; gap: var(--space-2); text-decoration: none; }
+.back svg { width: 16px; height: 16px; }
 .back:hover { color: var(--color-accent-text); }
 .projectHeader { padding-block: 2.25rem 3.5rem; }
 .projectHeader h1 { font-size: clamp(3rem, 7vw, 6rem); margin-block: 1.5rem; }
@@ -19,7 +20,7 @@
 .copy a:not(:global(.button)) { color: var(--color-ink); }
 .copy a:hover { color: var(--color-accent-text); }
 .copy strong { color: var(--color-ink); font-weight: 500; }
-.architecture { margin-block: 2rem; padding: 1.5rem; background: var(--color-surface); border: 1px solid var(--color-line); }
+.architecture { margin-block: 2rem; padding: 1.75rem; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-panel); }
 .architectureSteps { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; gap: 1.5rem; margin-top: 1.5rem; }
 .architectureSteps li { border-top: 1px solid #a0a0a0; padding-top: 1rem; font-size: 0.875rem; }
 .architectureSteps span { display: block; font-size: 0.6875rem; margin-top: 0.5rem; color: var(--color-muted); }
@@ -31,9 +32,15 @@
 .decisions details { border-top: 1px solid var(--color-line); padding-block: 1.125rem; }
 .decisions details:last-child { border-bottom: 1px solid var(--color-line); }
 .decisions summary { min-height: 44px; cursor: pointer; font-size: 0.9375rem; }
+.decisions summary:hover { color: var(--color-accent-text); }
 .decisions summary::marker { color: var(--color-accent-text); }
 .decisions p { font-size: 0.875rem; padding-left: 1rem; }
-.projectCta { border-top: 1px solid var(--color-line); padding-block: 3rem 5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; }
+.projectCta { border-top: 1px solid var(--color-line); padding-block: 3rem 4rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; }
+.focusAreas { margin-top: 2rem; border: 1px solid var(--color-line); border-radius: var(--radius-panel); padding-inline: 1.5rem; background: var(--color-surface); }
+.focusAreas > div { display: grid; grid-template-columns: 115px 1fr; align-items: baseline; gap: 1.25rem; padding-block: 1.25rem; }
+.focusAreas > div + div { border-top: 1px solid var(--color-line); }
+.focusAreas dt { font-size: 0.875rem; font-weight: 500; }
+.focusAreas dd { font-size: 0.875rem; color: var(--color-muted); margin: 0; }
 .principles { list-style: none; }
 .principles li { border-top: 1px solid var(--color-line); padding-block: 1.5rem; }
 .principles li:first-child { border-top: 0; padding-top: 0; }
@@ -60,4 +67,6 @@
   .profileStrip { gap: 1rem; }
   .profileStrip > a { margin-left: 0; }
   .pageEnd { margin-bottom: 3rem; }
+  .focusAreas { padding-inline: 1.25rem; }
+  .focusAreas > div { grid-template-columns: 1fr; gap: 0.5rem; }
 }

@@ -13,7 +13,7 @@ const body = localFont({ src: "../../node_modules/@fontsource-variable/dm-sans/f
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "BLD8 — Web development & applied AI", template: "%s — BLD8" },
+  title: { default: "BLD8 — Software & AI research", template: "%s — BLD8" },
   description: site.description,
   applicationName: site.name,
 };

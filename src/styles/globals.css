@@ -1,6 +1,6 @@
 html { scroll-padding-top: 2rem; }
 body {
-  background: var(--color-bg);
+  background: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-body), Arial, sans-serif;
   font-size: 1rem;
@@ -9,7 +9,8 @@ body {
 }
 ::selection { background: var(--color-accent); color: var(--color-accent-ink); }
 :focus-visible { outline: 2px solid var(--color-accent-text); outline-offset: 6px; }
-a { text-underline-offset: 0.3em; }
+a { text-underline-offset: 0.3em; text-decoration-thickness: 1px; }
+a [data-arrow] { flex-shrink: 0; }
 button { touch-action: manipulation; }
 h1, h2, h3 { font-family: var(--font-display), Arial, sans-serif; font-weight: 500; line-height: 1.1; }
 h1 { letter-spacing: -0.065em; }
@@ -19,12 +20,23 @@ main { min-height: 65vh; }
 .container { width: min(var(--content-width), calc(100% - var(--gutter) * 2)); margin-inline: auto; }
 .eyebrow { font: 0.6875rem/1.5 var(--font-mono); text-transform: uppercase; letter-spacing: 0.13em; }
 .muted { color: var(--color-muted); }
-.text-link { display: inline-flex; align-items: center; gap: 0.75rem; min-height: 44px; text-decoration: none; font-size: 0.875rem; }
+.text-link { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; text-decoration: none; font-size: 0.875rem; background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: left calc(100% - 8px); background-size: 0 1px; }
+.text-link:is(:hover, :focus-visible) { background-size: calc(100% - 1rem - var(--space-2)) 1px; }
 .text-link:hover { color: var(--color-accent-text); }
 .text-link svg { width: 1rem; height: 1rem; }
-.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 52px; padding: 0.75rem 1.25rem; border: 1px solid var(--color-accent); border-radius: var(--radius); background: var(--color-accent); color: var(--color-accent-ink); font-size: 0.875rem; font-weight: 600; text-decoration: none; }
-.button:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); }
+.button { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3); min-height: 48px; padding: 0.75rem 1.25rem; border: 1px solid var(--color-accent); border-radius: var(--radius); background: var(--color-accent); color: var(--color-accent-ink); font-size: 0.875rem; font-weight: 600; text-decoration: none; box-shadow: 0 2px 3px #19191908, inset 0 1px 0 #ffffff80; }
+.button::before { content: ""; position: absolute; inset: -3px; }
+.button:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); box-shadow: 0 5px 12px #19191912, inset 0 1px 0 #ffffff80; }
+.button:active { box-shadow: 0 1px 2px #19191908, inset 0 1px 0 #ffffff80; }
 .button svg { width: 18px; height: 18px; }
 .skip-link { position: fixed; z-index: 50; top: 0.75rem; left: 1rem; padding: 0.75rem 1rem; color: var(--color-accent-ink); background: var(--color-accent); transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+/* Small registration marks anchor section rules without adding content. */
+.section-rule { position: relative; border-top: 1px solid var(--color-line); }
+.section-rule::before, .section-rule::after { content: ""; position: absolute; top: -4px; width: 7px; height: 7px; pointer-events: none; opacity: 0.55; background: linear-gradient(var(--color-faint), var(--color-faint)) center / 7px 1px no-repeat, linear-gradient(var(--color-faint), var(--color-faint)) center / 1px 7px no-repeat; }
+.section-rule::before { left: 0; }
+.section-rule::after { right: 0; }
+.detail-label { display: flex; align-items: center; gap: 0.75rem; }
+.detail-label::before { content: ""; width: 18px; height: 1px; flex-shrink: 0; background: var(--color-accent-text); }

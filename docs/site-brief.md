@@ -1,5 +1,7 @@
 # Site brief
 
+Latest local work (28 September 2026): a brighter minimal refinement inspired by Linear and ElevenLabs, with unchanged colours and a broader .NET/C#/web/mobile/AI research focus. See site-direction.md and content-inventory.md. This refinement and the BLD8 UI case study are now published; see deployment.md. The status below records the prior approved release.
+
 Status: first local implementation on 23 September 2026. Previous minimal white-and-black design with bright lime accents (refined after restoration) after the brutalist experiment was rejected; copy is concise and project-focused; design and copy approved; first production deployment is live at bld8-web.vercel.app. Custom-domain HTTPS and the redirect are verified; Coffee Docket is published as of 28 September 2026. Manual accessibility review remains pending.
 
 Purpose: give personal projects and their supporting notes a clear home.

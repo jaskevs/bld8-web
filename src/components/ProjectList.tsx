@@ -6,7 +6,7 @@ import styles from "./Projects.module.css";
 
 export function ProjectList() {
   return <div className={styles.list}>{projects.map((project) => (
-    <article key={project.slug} className={styles.project}>
+    <article key={project.slug} className={`${styles.project} ${project.featured ? styles.featured : ""}`}>
       <ProjectVisual kind={project.slug} />
       <div className={styles.projectBody}>
         <p className={`eyebrow ${styles.category}`}>{project.category}</p>

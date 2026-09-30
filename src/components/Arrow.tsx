@@ -1,7 +1,9 @@
-export function Arrow({ diagonal = false }: { diagonal?: boolean }) {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <path d={diagonal ? "M5 15 15 5M5 5h10v10" : "M3 10h13m-5-5 5 5-5 5"} stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
-    </svg>
-  );
+import { DotIcon } from "./DotIcon";
+
+export function Arrow({ diagonal = false, back = false }: {
+  diagonal?: boolean;
+  back?: boolean;
+}) {
+  const name = back ? "arrow-left" : diagonal ? "arrow-up-right" : "arrow-right";
+  return <DotIcon name={name} motionDirection={back ? "back" : diagonal ? "diagonal" : "right"} />;
 }

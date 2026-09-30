@@ -6,6 +6,7 @@ describe("public content integrity", () => {
   it("keeps project destinations in the public route set and source links under the personal owner", () => {
     for (const project of projects) {
       expect(publicRoutes).toContain(project.href);
+      if (!project.repository) continue;
       expect(new URL(project.repository).hostname).toBe("github.com");
       expect(new URL(project.repository).pathname).toMatch(/^\/jaskevs\/(bld8-(web|workbench)|coffee-docket)$/);
     }

@@ -18,6 +18,7 @@ bld8-web/
       work/page.tsx                Project list: /work
       work/workbench/page.tsx       Workbench project notes
       work/bld8-web/page.tsx        Website project notes
+      work/bld8-ui/page.tsx         BLD8 UI case study (published)
       work/coffee-docket/page.tsx   Coffee Docket project notes (published)
       sitemap.ts                   Public route sitemap
       robots.ts                    Crawler rules
