@@ -100,7 +100,8 @@ existing personal author/committer identity. Editing and local verification can 
 design/motion, the Base UI-backed React package, first-edition scope and notes to
 self. Keep the tone concise and factual. Its live links use
 https://bld8-ui.vercel.app (site.uiShowcase), not the deferred custom domain.
-The package has not been published to npm and has no public GitHub repository.
+The package has not been published to npm. Its source is now public at
+https://github.com/jaskevs/bld8-ui by the user's 30 September decision.
 The second full-width project panel uses the library's own yellow/black artwork;
 the portfolio palette stays lime/white/grey. The reusable library code remains
 in its separate sibling project. The website only contains its case study.

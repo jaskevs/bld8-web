@@ -129,3 +129,9 @@ The personal repository-local SSH identity and commit guards remain in place.
 Commits are restricted to outside 08:00-17:00 Australia/Melbourne. No company or
 global Git, GitHub CLI or SSH settings are changed. Existing main pushes trigger
 Vercel production deployments. See verification.md for local release checks.
+
+Git release verified, 30 September: implementation commit b3a1179 is pushed.
+GitHub Actions run 36689861713 passed, and Vercel's commit status reported
+success / Deployment has completed for this exact commit. The separate BLD8 UI
+source is now public at https://github.com/jaskevs/bld8-ui by user choice;
+its source push does not yet trigger its own Vercel deployment.
